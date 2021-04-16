@@ -1,0 +1,751 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root{
+    --colorPrimaria: #36393F;
+    --colorSecundaria: #2f3136;
+    --colorTerciaria: #202225;
+    --colorQuarta: #292b2f;
+    --colorQuinta: #393d42;
+    --colorSexta: #828386;
+    --colorSetima: #b9b9b9;
+    --colorOitava: #e2e2e2;
+    --colorNona: #202225;
+
+    --colorWhite: #fff;
+    --colorGrey: #808080;
+    --colorInput: #40444b;
+    --colorSimbolos: #74777a;
+
+    --colorGod: rgb(230, 195, 0);
+    --colorADM: rgb(179, 28, 28);
+    --colorMember: rgb(80, 142, 212);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background: var(--colorInput); 
+}
+  
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 15px;
+    background: var(--colorTerciaria); 
+}
+
+.menu-mobile{
+    display: none;
+}
+.enviar-message-mobile{
+    display: none;
+}
+.barra-lateral-mobile{
+    display: none;
+}
+
+body {
+    overflow: hidden;
+}
+
+/* HEADER */
+header .container{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    left: 80px;
+    height: 55px;
+    width: calc(100% - 80px);
+    background-color: var(--colorPrimaria);
+    border-radius: 5px 0 0 0;
+    border-bottom: 2px solid var(--colorTerciaria);
+    z-index: 999;
+}
+header .container .nome{
+    display: flex;
+    width: 270px;
+    height: 55px;
+    align-items: center;
+    background-color: var(--colorSecundaria);
+    cursor: pointer;
+}
+header .container span{
+    padding: 24px;
+    font-size: 1rem;
+    color: var(--colorSexta);
+}
+header .container .nome:hover{
+    background: var(--colorPrimaria);
+}
+header .container .nome h1{
+    color: var(--colorWhite);
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding-left: 17px;
+}
+header .container .conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    height: 100%;
+}
+header .container .conteudo h2{
+    display: flex;
+    align-items: center;
+    color: var(--colorWhite);
+    font-size: 1rem;
+    padding-right: 20px;
+    height: 50%;
+    border-right: 1px solid var(--colorSimbolos);
+}
+header .container .conteudo h2 span{
+    color: var(--colorSexta);
+    font-size: 2rem;
+    font-weight: normal;
+}
+header .container .conteudo p {
+    color: var(--colorGrey);
+}
+header .container .conteudo ul {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+header .container .conteudo ul li{
+    padding: 12px;
+}
+header .container .conteudo ul li input{
+    border: 0;
+    border-radius: 4px;
+    outline: 0;
+    height: 29px;
+    background-color: var(--colorTerciaria);
+    color: var(--colorGrey);
+}
+header .container .conteudo ul li a i{
+    color: var(--colorSimbolos);
+    font-size: 1.2rem;
+}
+header .container .conteudo ul li a i:hover{
+    color: var(--colorOitava);
+}
+header .container .conteudo ul li a .pessoas{
+    color: var(--colorWhite);
+}
+
+header .container .menu-mobile{
+    display: none;
+}
+
+/* ASIDE-ESQUERDA */
+aside .barra-lateral {
+    position: fixed;
+    width: 80px;
+    height: 100%;
+    background-color: var(--colorNona);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+aside .barra-lateral figure img{
+    margin: 8px 14px 5px;
+    width: 51px;
+    height: 51px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+aside .barra-lateral figure figcaption{
+    display: none;
+}
+aside .barra-lateral figure hr{
+    background-color: var(--colorQuinta);
+    border: 0;
+    height: 2px;
+    width: 50%;
+    margin: auto;
+}
+aside .barra-lateral div figure img{
+    margin: 8px 14px 0px;
+    width: 51px;
+    height: 51px;
+    border-radius: 100%;
+}
+aside .barra-lateral .create{
+    display: flex;
+    align-items: center;
+    height: calc(100% - 196px);
+    flex-direction: column;
+    justify-content: flex-end;
+    color: var(--colorSexta);
+}
+aside .barra-lateral .create i{
+    font-size: 3rem;
+    padding: 15px;
+}
+aside .barra-lateral .create i:hover{
+    color: rgb(82, 196, 101);
+    transform: scale(1.1);
+}
+aside .barra-lateral .server:hover{
+    border-left: 2px solid var(--colorOitava);
+    transition: .1s;
+}
+aside .barra-lateral div figure img:hover{
+    border-radius: 40%;
+    transition: .1s;
+}
+aside .barra-lateral div .selected-server{
+    border-left: 2px solid var(--colorSetima);
+}
+aside .barra-lateral div figure .selected{
+    border-radius: 36%;
+}
+aside .barra-lateral-mobile {
+    display: none;
+}
+
+aside .canais {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background: var(--colorSecundaria);
+    top: 57px;
+    flex-wrap: wrap;
+    max-width: 245px;
+    height: calc(100% - 57px);
+    width: 100%;
+    margin-left: 80px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+aside .canais ul{
+    width: 100%;
+    margin: 8px;
+}
+aside .canais ul span{
+    font-size: 0.6rem;
+    padding-right: 5px;
+    color: var(--colorGrey);
+}
+aside .canais ul h3{
+    font-size: 0.9rem;
+    color: var(--colorGrey);
+    margin: 10px;
+    cursor: pointer;
+}
+aside .canais ul .adicionar1{
+    padding-left: 75px;
+    font-size: 1.2rem;
+    color: var(--colorGrey);
+}
+aside .canais ul .adicionar{
+    padding-left: 106px;
+    font-size: 1.2rem;
+    color: var(--colorGrey);
+}
+aside .canais ul .adicionar:hover , aside .canais ul .adicionar1:hover{
+    color: var(--colorOitava);
+}
+aside .canais ul h3:hover{
+    color: var(--colorOitava);
+}
+aside .canais ul li{
+    padding: 7px;
+    cursor: pointer;
+}
+aside .canais ul li:hover{
+    background: var(--colorQuinta);
+    border-radius: 5px;
+    width: 88%;
+}
+aside .canais ul li span{
+    padding-right: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--colorGrey);
+}
+aside .canais ul h3 span i{
+    padding: 5px;
+}
+aside .canais ul li h2{
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--colorGrey);
+}
+.min.hidde{
+    display: none;
+}
+.minimizar.girar {
+    transform: rotate(270deg);
+    transition: .2s;
+}
+.minimizar.padrao {
+    transform: rotate(0deg);
+    transition: .2s;
+}
+
+aside .perfil {
+    position: fixed;
+    display: flex;
+    max-width: 245px;
+    width: 100%;
+    max-height: 54px;
+    height: 100%;
+    flex-direction: row;
+    margin-left: 80px;
+    top: 91vh;
+    background: var(--colorQuarta);
+}
+aside .perfil-info {
+    width: 160px;
+}
+aside .perfil-info figure {
+    display: inline-flex;
+    padding: 5px 0 5px 5px;
+}
+aside .perfil-info figure img {
+    width: 42px;
+    height: 41px;
+    border-radius: 100%;
+}
+aside .perfil-info figure div {
+    display: grid;
+    margin: 5px;
+}
+aside .perfil-info figure h2{
+    color: var(--colorWhite);
+    font-size: 0.9rem;
+}
+aside .perfil-info figure p{
+    color: var(--colorGrey);
+    font-size: 0.8rem;
+}
+aside .perfil-microfones {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 85px
+}
+aside .perfil-microfones ul {
+    display: flex;
+    margin-right: 19px;
+}
+aside .perfil-microfones ul li {
+    font-size: 1rem;
+    font-weight: normal;
+    padding: 5px;
+    color: var(--colorSetima);
+    cursor: pointer;
+}
+aside .perfil-microfones ul li:hover{
+    background: var(--colorInput);
+    border-radius: 5px;
+}
+
+/* MAIN */
+main {
+    position: absolute;
+    top: 57px;
+    width: 75%;
+    left: 324px;
+    height: calc(100% - 57px);
+    background: var(--colorPrimaria);
+    max-width: 756px;
+}
+main .container{
+    position: relative;
+    width: 100%;
+    height: 88%;
+    background: var(--colorPrimaria);
+    overflow-y: auto;
+}
+main .container div .message{
+    display: flex;
+    margin-bottom: 5px;
+    padding: 10px 15px;
+    align-items: flex-start;
+}
+main .container div .message:hover{
+    background: var(--colorSecundaria);
+}
+main .container div .message img{
+    width: 43px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+main .container div .message div{
+    display: grid;
+}
+main .container div .message div h2{
+    color: var(--colorSexta);
+    font-weight: 500;
+    font-size: 1rem;
+    padding-left: 15px;
+}
+main .container div .message div span{
+    color: var(--colorGrey);
+    font-weight: normal;
+    padding-left: 10px;
+    font-size: 0.8rem;
+}
+main .container div .message div .membros{
+    color: var(--colorMember);
+}
+main .container div .message div .ademir{
+    color: var(--colorADM);
+}
+main .container div .message div p{
+    padding: 5px 15px 0;
+    color: white;
+}
+main .enviar-message{
+    position: fixed;
+    background: var(--colorPrimaria);
+    top: 87%;
+    margin-top: 20px;
+    height: 100%;
+    max-width: 755px;
+}
+main .enviar-message div{
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+    height: 50px;
+    background: #40444b;
+    border-radius: 7px;
+}
+main .enviar-message div ul{
+    display: flex;
+    margin: 10px 15px;
+}
+main .enviar-message div ul li{
+    padding: 7px;
+}
+main .enviar-message div ul li i{
+    color: var(--colorSetima);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+main .enviar-message div ul li i:hover{
+    color: var(--colorWhite);
+}
+main .enviar-message div .digitar{
+    width: 518px;
+    margin: 0;
+}
+main .enviar-message div .digitar input {
+    width: 100%;
+    height: 100%;
+    font-size: 1rem;
+    background: none;
+    border: 0;
+    outline: 0;
+    color: var(--colorOitava);
+}
+
+/* ASIDE-DIREITA */
+.aside-direita{
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    background: var(--colorSecundaria);
+    top: 57px;
+    left: 1080px;
+    max-width: calc(100% - 1080px);
+    width: 100%;
+    height: calc(100% - 57px);
+    overflow-y: auto;
+    z-index: 998;
+}
+aside .rolagem{
+    width: 100%;
+    background: var(--colorSecundaria);
+}
+aside div .online {
+    margin: 10px;
+}
+aside div .online ul h1{
+    font-size: 0.8rem;
+    padding: 10px;
+    text-transform: uppercase;
+    color: var(--colorSexta);
+}
+aside div .online ul li {
+    padding: 7px 7px 10px;
+    display: flex;
+    cursor: pointer;
+}
+aside div .online ul li:hover{
+    background: var(--colorPrimaria);
+    width: 95%;
+    border-radius: 5px;
+}
+aside div .online ul img{
+    width: 37px;
+    height: 37px;
+    border-radius: 100%;
+}
+aside div .online ul div h2{
+    color: var(--colorSexta);
+    font-size: 1rem;
+    font-weight: 500;
+    padding-left: 10px;
+}
+aside div .online ul div p{
+    color: var(--colorGrey);
+    font-size: 0.8rem;
+    padding-left: 10px;
+}
+
+/* Deuses */
+aside div .online ul .deuses h2{
+    color: var(--colorGod);
+}
+/* Ademirs */
+aside div .online ul .ademir h2{
+    color: var(--colorADM);
+}
+/* Members */
+aside div .online ul .membros h2{
+    color: var(--colorMember);
+}
+
+aside div .offline{
+    margin: 10px;
+}
+aside div .offline h1{
+    font-size: 0.8rem;
+    padding: 10px;
+    text-transform: uppercase;
+    color: var(--colorSexta);
+}
+aside div .offline ul li{
+    padding: 7px 7px 10px;
+    filter: grayscale(50%);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+aside div .offline ul li:hover{
+    background: var(--colorPrimaria);
+    width: 95%;
+    border-radius: 5px;
+}
+aside div .offline ul li img{
+    width: 37px;
+    height: 37px;
+    border-radius: 100%;
+}
+aside div .offline ul li h2{
+    color: var(--colorSexta);
+    font-size: 1rem;
+    font-weight: 500;
+    padding-left: 10px;
+}
+aside div .offline ul li p{
+    color: var(--colorGrey);
+    font-size: 0.8rem;
+    padding-left: 10px;
+}
+
+/* MEDIA */ 
+@media screen and (max-width: 768px){ 
+    .aside-direita.hidde {
+        display: none
+    }
+
+    header .container{
+        display: none;
+    }
+    header .menu-mobile{
+        position: fixed;
+        display: flex;
+        align-items: center;
+        height: 55px;
+        width: 100%;
+        background-color: var(--colorPrimaria);
+        border-bottom: 2px solid var(--colorTerciaria);
+        z-index: 999;
+    }
+    header .menu-mobile .menu{
+        padding: 20px;
+    }
+    header .menu-mobile .menu ul li i{
+        font-size: 1.5rem;
+        color: var(--colorWhite);
+        cursor: pointer;
+    }
+    .conteudo ul li {
+        padding: 0px;
+    }
+    header .menu-mobile .conteudo {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+    }
+    header .menu-mobile .conteudo span{
+        font-size: 1.4rem;
+        color: var(--colorGrey);
+        padding: 5px;
+    }
+    header .menu-mobile .conteudo h2{
+        font-size: 1rem;
+        color: var(--colorWhite);
+    }
+    header .menu-mobile .conteudo ul{
+        display: flex;
+        padding: 5px;
+    }
+    header .menu-mobile .conteudo ul li a{
+        text-decoration: none;
+    }
+    header .menu-mobile .conteudo ul li a i{
+        padding: 10px;
+        font-size: 1rem;
+        color: var(--colorSetima);
+    }
+    header .menu-mobile .conteudo ul li a .pessoas{
+        color: var(--colorOitava);
+    }
+
+    .barra-esquerda-mobile.hidde{
+        display: none;
+    }
+    aside .barra-lateral-mobile {
+        z-index: 998;
+        position: fixed;
+        display: block;
+        top: 57px;
+        width: 80px;
+        height: 100%;
+        background-color: var(--colorNona);
+    }
+    aside .barra-lateral-mobile figure img{
+        margin: 8px 14px 5px;
+        width: 51px;
+        height: 51px;
+        border-radius: 100%;
+    }
+    aside .barra-lateral-mobile figure figcaption{
+        display: none;
+    }
+    aside .barra-lateral-mobile figure hr{
+        background-color: var(--colorQuinta);
+        border: 0;
+        height: 2px;
+        width: 50%;
+        margin: auto;
+    }
+    aside .barra-lateral-mobile div figure img{
+        margin: 8px 14px 0px;
+        width: 51px;
+        height: 51px;
+        border-radius: 100%;
+    }
+    aside .barra-lateral-mobile .create{
+        display: flex;
+        height: calc(100% - 253px);
+        flex-direction: column;
+        justify-content: flex-end;
+        color: var(--colorSexta);
+    }
+    aside .barra-lateral-mobile .create i{
+        font-size: 3rem;
+        padding: 15px;
+    }
+    aside .canais {
+        width: 250%;
+        left: -1px;
+        z-index: 999;
+    }
+    aside .canais ul .adicionar1 {
+        padding-left: 50px;
+        font-size: 1.1rem;
+    }
+    aside .canais ul .adicionar {
+        padding-left: 79px;
+        font-size: 1.1rem;
+    }
+    aside .perfil {
+        display: none;
+    }
+    main{
+        left: 0px;
+        background: var(--colorPrimaria);
+        height: calc(100% - 57px);
+        width: 100%;
+    }
+    main .enviar-message{
+        display: none;
+    }
+    main .enviar-message-mobile {
+        position: fixed;
+        display: flex;
+        background: var(--colorPrimaria);
+        top: 90%;
+        width: 100%;
+        height: 100%;
+    }
+    main .enviar-message-mobile .digitar-mobile {
+        width: 95%;
+    }
+    main .enviar-message-mobile div{
+        display: flex;
+        align-items: center;
+        margin: 0px 1px 0 3px;
+        height: 45px;
+        border-radius: 7px;
+    }
+    main .enviar-message-mobile div ul{
+        display: flex;
+    }
+    main .enviar-message-mobile div ul li{
+        padding: 7px;
+        margin: 3px;
+        background-color: var(--colorTerciaria);
+        border-radius: 100%;
+    }
+    main .enviar-message-mobile div ul li:hover{
+        background-color: var(--colorSecundaria);
+    }
+    main .enviar-message-mobile div ul li i{
+        font-size: 1.3rem;
+        color: var(--colorSetima);
+        cursor: pointer;
+    }
+    main .enviar-message-mobile .digitar-mobile input {
+        width: 100%;
+        height: 100%;
+        font-size: 1rem;
+        background: none;
+        border: 0;
+        border-radius: 40px;
+        outline: 0;
+        margin: 0 5px 0 0;
+        background-color: var(--colorTerciaria);
+        color: var(--colorOitava);
+        text-align: center;
+    }
+    aside .canais ul h3 span i {
+        padding: 0;
+    }
+    aside.aside-direita {
+        z-index: 999;
+        left: 40%;
+        max-width: calc(100% - 40%);
+        height: calc(100% - 57px);
+    }
+
+    .barra-esquerda{
+        display: none;
+    }
+}
+
